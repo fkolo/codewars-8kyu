@@ -47,7 +47,37 @@ function mergeArrays( arr1, arr2) {
     if (newArr[i] === newArr[i + 1]) {
         newArr.splice[i]
     }
-  }console.log(newArr)
+  }return newArr
 }
 
-mergeArrays([1, 2, 3, 4, 5], [5, 6, 7, 8])
+
+
+//rock paper scissors!
+
+function rps (p1, p2) {
+
+  if( p1 === 'rock' && p2 === 'scissors' ||
+      p1 === 'scissors' && p2 === 'paper' ||
+      p1 === 'paper' && p2 === 'rock' ) {
+        return 'Player 1 won!'
+      } else if (p1 === p2){
+        return 'Draw!'
+      } else {
+        return 'Player 2 won!'
+      }
+
+}
+
+//alternative rps with arrow function
+
+const rps = (p1, p2) => {
+  if( p1 === p2) return "Draw!";
+  var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+  if (p2 === rules[p1]){
+    return "Player 1 won!";
+  }
+  else {
+      return "plater 2 won!"
+  }
+
+}
